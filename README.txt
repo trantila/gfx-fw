@@ -21,11 +21,15 @@ Both.
 # effort on them. If you do, explain the work you did in the problems/bugs section
 # and leave your 'attempt' code in place (commented out if necessary) so we can see it.
 
-R1       Sample diffuse texture (1p): not done
-R2        Sample normal texture (1p): not done
-R3  Blinn-Phong diffuse shading (2p): not done
-R4 Blinn-Phong specular shading (2p): not done
+R1       Sample diffuse texture (1p): done
+R2        Sample normal texture (1p): done
+R3  Blinn-Phong diffuse shading (2p): donish
+R4 Blinn-Phong specular shading (2p): donish
 R5     Normal transform insight (4p): not done
+
+# R5 - Normal transform insight
+
+
 
 # Did you do any extra credit work?
 (Describe what you did and, if there was a substantial amount of work involved, how you did it. Also describe how to use/activate your extra features, if they are interactive.)

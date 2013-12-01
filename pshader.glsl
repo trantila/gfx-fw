@@ -89,7 +89,7 @@ void main()
 	// YOUR CODE HERE (R4)
 	// Compute the to-viewer vector V which you'll need in the loop
 	// below for Blinn-Phong specular computation.
-	vec3 V = vec3(0.0);
+	vec3 V = normalize((posToCamera * vec4(positionVarying, 1)).xyz - positionVarying); //vec3(0.0);
 
 	// loop over each light, add their contribution here
 	vec3 L = vec3(0.0);
@@ -99,11 +99,12 @@ void main()
 		// YOUR CODE HERE (R3)
 		// Compute the contribution of this light to diffuse shading.
 		// This is just one row of code.
-		vec3 diffuse = vec3(0.0);
+		vec3 diffuse = diffuseColor.xyz * max(dot(N, lightDirections[i]), 0.0); //vec3(0.0);
 
 		// YOUR CODE HERE (R4)
 		// Compute the contribution of this light to Blinn-Phong (half-angle) specular shading.
-		vec3 specular = vec3(0, 0, 0);
+		vec3 H = normalize(V+lightDirections[i]);
+		vec3 specular = specularColor.xyz * pow(max(dot(H,N), 0.0), glossiness); //vec3(0, 0, 0);
 
 		if (setDiffuseToZero)
 			diffuse = vec3(0, 0, 0);

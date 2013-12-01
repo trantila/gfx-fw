@@ -104,7 +104,7 @@ void main()
 		// YOUR CODE HERE (R4)
 		// Compute the contribution of this light to Blinn-Phong (half-angle) specular shading.
 		vec3 H = normalize(V + lightDirections[i]);
-		vec3 specular = specularColor * max(dot(H,N), 0.0); //vec3(0, 0, 0);
+		vec3 specular = specularColor * pow(max(dot(H,N), 0.0), glossiness); //vec3(0, 0, 0);
 
 		if (setDiffuseToZero)
 			diffuse = vec3(0, 0, 0);
